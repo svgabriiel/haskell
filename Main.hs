@@ -51,3 +51,6 @@ calMedia a
     |soma( nota a)/3 >= 5 = "Aprovado!"
     |otherwise = "reprovado!"
 
+
+bonusSalario::Ptest -> Int
+bonusSalario 
