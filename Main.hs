@@ -14,21 +14,16 @@ main = do
         print(dobrar (calcAreaCirc(5.86)))
         print(msg)
         print( elevaEinverte [2,3,4] )
+        print(nomesAprovados [("GB",10.0),("Gabriel",10.0),("piolho",6.0)])
 
 
-
-
+pars::[Int] ->ç
 
 elevaEinverte :: [Int] -> [Int]
 elevaEinverte lista = map(*(-1))(map(^2)lista)
 
-
-
-
-
-
-
-
+nomesAprovados::[(String,Float)] -> [String]
+nomesAprovados lista = map fst (filter (\(nome,nota) -> length nome >5 && nota >= 7.0)lista)
 
 data Pessoa = Pessoa{nome::String, idade::Int, altura::Float, ano::Int}
 eu = Pessoa{nome = "Gabriel", idade = 23, altura = 1.75, ano = 2003}
@@ -74,9 +69,6 @@ calMedia::Ptest -> String
 calMedia a
     |soma( nota a)/3 >= 5 = "Aprovado!"
     |otherwise = "reprovado!"
-
-
-
 
 somi:: [Int] -> Int
 somi p  = sum(map(^2)(filter (even) p))
