@@ -1,3 +1,6 @@
+import Data.List
+import Data.Char
+import Funcoeshaskell
 main::IO()
 main = do 
         print(reajuste[("f", 10), ("b",7), ("U", 5.6)] )
@@ -5,6 +8,27 @@ main = do
         print("===================================")
         print(pessoaMaior  p1 p2)
         print(calMedia p2)
+        print(somi [1,3,2])
+        print(convertP["gabriel", "lindo"])
+        print("============================")
+        print(dobrar (calcAreaCirc(5.86)))
+        print(msg)
+        print( elevaEinverte [2,3,4] )
+
+
+
+
+
+elevaEinverte :: [Int] -> [Int]
+elevaEinverte lista = map(*(-1))(map(^2)lista)
+
+
+
+
+
+
+
+
 
 data Pessoa = Pessoa{nome::String, idade::Int, altura::Float, ano::Int}
 eu = Pessoa{nome = "Gabriel", idade = 23, altura = 1.75, ano = 2003}
@@ -52,5 +76,10 @@ calMedia a
     |otherwise = "reprovado!"
 
 
-bonusSalario::Ptest -> Int
-bonusSalario 
+
+
+somi:: [Int] -> Int
+somi p  = sum(map(^2)(filter (even) p))
+
+convertP :: [String] -> [String]
+convertP lista = map(map(toUpper))lista
